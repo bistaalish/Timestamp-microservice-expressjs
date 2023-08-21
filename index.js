@@ -34,9 +34,13 @@ app.get("/api",(req,res)=>{
   const date = new Date()
   res.json({unix:date.valueOf(),utc:date.toUTCString()});
 })
+
+
 app.get("/api/:date",(req,res)=>{
   // Getting timestamp from params and parsing it to int.
-  const timestamp = parseInt(req.params.date);
+  let timestamp = req.params.date;
+  if (/^\d{5,}$/.test(dateParam))
+    dateParam = parseInt(dateParam);
   // Converting it to base
   let date = new Date(timestamp);
 
