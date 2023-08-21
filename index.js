@@ -39,8 +39,11 @@ app.get("/api",(req,res)=>{
 app.get("/api/:date",(req,res)=>{
   // Getting timestamp from params and parsing it to int.
   let timestamp = req.params.date;
-  if (/^\d{5,}$/.test(timestamp))
-    dateParam = parseInt(timestamp);
+  const regix = /^\d{13}$/;
+  if (regix.test(timestamp)){
+
+    timestamp = parseInt(timestamp);
+  }
   // Converting it to base
   let date = new Date(timestamp);
 
