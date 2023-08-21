@@ -19,7 +19,12 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-
+const routeLogMiddleware = (req,res,next) => {
+  var string = req.method + " " + req.path + " - " + req.ip;
+  console.log(string)
+  next();
+}
+app.use(routeLogMiddleware);
 // // your first API endpoint... 
 // app.get("/api/hello", function (req, res) {
 //   res.json({greeting: 'hello API'});
