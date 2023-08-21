@@ -30,6 +30,10 @@ app.use(routeLogMiddleware);
 //   res.json({greeting: 'hello API'});
 // });
 
+app.get("/api",(req,res)=>{
+  const date = new Date()
+  res.json({unix:date.valueOf(),utc:date.toUTCString()});
+})
 app.get("/api/:date",(req,res)=>{
   // Getting timestamp from params and parsing it to int.
   const timestamp = parseInt(req.params.date);
