@@ -1,11 +1,12 @@
 # Timestamp Microservice
 
-Brief description of your project.
+This is my project of the [Timestamp Microservice challenge](https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/timestamp-microservice) for the freeCodeCamp API and Microservice certification. It was built based on the boilerplate available [here](https://github.com/freeCodeCamp/boilerplate-project-timestamp/).
 
+## Hosted
+Check this program:
+[Timestamp](https://timestamp-microservice-3dmy.onrender.com)
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -14,33 +15,31 @@ Brief description of your project.
 - [License](#license)
 - [Contact](#contact)
 
-## Introduction
-
-Provide a clear and concise overview of your project. Explain what it does, why it's useful, and who it's for. You can also include any badges or shields here to highlight project status, build status, or other relevant information.
-
-## Features
-
-List the main features of your project. This could be a bullet-point list or a brief paragraph explaining the key functionalities.
-
 ## Getting Started
 
-Guide users through getting your project up and running on their local machine. This section should cover the prerequisites and installation steps.
+
 
 ### Prerequisites
 
-List any software, tools, libraries, or dependencies that users need to have installed before they can use your project.
-
+#### Software Requirements
+- nodejs
 ### Installation
 
-Provide step-by-step instructions on how to install and set up your project. You can use code blocks to show terminal commands or configuration examples.
+Just run on terminal:
+```
+npm install
+npm start
+```
 
-## Usage
+## End Points
+Endpoints | Description
+----------|-------------
+GET `/api/` | Return a date object with unix timestamp and UTC timestamp of the current timestamp
+GET `/api/{dateParam}` | Return a date object of the informed timestamp (unix or UTC ISO-8601)
 
-Show users how to use your project. Include code examples and explanations if necessary. You can use screenshots or even GIFs to demonstrate the project in action.
+## Author
 
-## Contributing
-
-Explain how others can contribute to your project. This might include guidelines for submitting bug reports, feature requests, or pull requests. Mention any coding standards or conventions you follow and how to set up a development environment.
+- Alish Bista
 
 ## License
 
@@ -48,7 +47,4 @@ Let users know the license under which your project is distributed. For example:
 
 This project is licensed under the [MIT License](LICENSE).
 
-## Contact
-
-Provide a way for users to contact you or your team. This could be an email address, a link to your GitHub profile, or a link to a dedicated "Contact" section in your repository.
 
