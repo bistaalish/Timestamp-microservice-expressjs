@@ -4,10 +4,11 @@
   "description": "An FCC Backend Challenge",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "./node_modules/nodemon/bin/nodemon.js index.js"
   },
   "dependencies": {
     "cors": "^2.8.0",
+    "dotenv": "^16.3.1",
     "express": "^4.12.4",
     "nodemon": "^3.0.1"
   },
